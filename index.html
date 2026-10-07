@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Historic Philadelphia Tour</title>
+<link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Widgets/widgets.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"><link rel="stylesheet" href="style.css"></head><body>
+<nav class="top"><b>Historic Philadelphia</b><a href="#tour">The tour</a><a href="#history">Brief history</a></nav>
+<header class="hero"><div class="inner"><p class="kicker">AI 101 · Tour Lab</p><h1>Where the United States began to take shape</h1>
+<p class="lede">William Penn founded Philadelphia in 1682. Take a virtual tour of seven landmarks and read the history behind each one.</p><a class="cta" href="#tour">Start the tour</a></div></header>
+<section id="tour" class="wrap"><h2>The tour</h2><p id="message" role="status" class="muted">Loading…</p>
+<div id="chips" class="chips" role="group" aria-label="Choose a stop"></div>
+<main>
+<article aria-label="Tour stop details">
+  <p id="count" class="count"></p>
+  <h3 id="name"></h3>
+  <img id="photo" hidden alt="">
+  <p id="nophoto" class="muted" hidden>No photo for this stop yet.</p>
+  <p id="desc" class="summary"></p>
+  <p id="hist"></p>
+  <p id="source" class="muted"></p>
+  <div class="buttons"><button id="prev">◀ Previous</button><button id="next">Next stop ▶</button></div>
+  <div id="problems" class="problems" role="alert"></div>
+  <p><a href="tests.html">Run tour tests</a></p>
+</article>
+<div id="globe" aria-label="Interactive 3D globe showing tour stop markers"></div>
+</main></section>
+<section id="history" class="band"><div class="wrap"><h2>Philadelphia in brief</h2>
+<ol class="timeline">
+<li><strong>1682</strong> William Penn founds the city as the center of his Pennsylvania colony.</li>
+<li><strong>1776</strong> The Declaration of Independence is adopted in the Pennsylvania State House.</li>
+<li><strong>1787</strong> Delegates draft the U.S. Constitution in the same building.</li>
+<li><strong>1829</strong> Eastern State Penitentiary opens and becomes a model for prisons worldwide.</li>
+<li><strong>2003</strong> The Liberty Bell Center opens in Independence National Historical Park.</li>
+</ol></div></section>
+<footer class="wrap">Grid globe, no satellite imagery or terrain. Stop positions and sources come from places.js. Timeline dates are general history; verify every fact before publishing.</footer>
+<script src="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Cesium.js"></script>
+<script src="config.js"></script><script src="places.js"></script><script src="tour-core.js"></script><script src="app.js"></script></body></html>
